@@ -1,0 +1,236 @@
+
+@import "vars";
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+  .hamburger {
+    display: block;
+  }    
+
+  .header {
+    &__content {  
+      padding: 5px 0;
+    }
+  }
+
+  .footer {
+    &__content {
+      flex-direction: column;
+      padding: 30px 0 0;
+
+      & > * {
+          margin: 0 auto 20px !important;            
+      }
+    }
+
+    .logo {
+      margin-bottom: 30px;
+    }
+
+    .politika {
+      margin: 0 auto 30px;
+      text-align: center;
+    }
+  }
+
+	.main-menu {
+    display: none;
+    background-color: #000;
+    position: fixed;
+    top: 82px;
+    left: 0;
+    right: 0;
+    text-align: left;
+    margin-left: 0;
+    z-index: 98;
+    padding: 10px 0;
+
+		ul {
+			display: block;
+			height: auto;
+      padding: 0;
+      margin: 0;
+
+			li {
+        margin: 0 0 5px;
+        font-size: 16px;
+
+        &:last-child {
+          margin: 0;
+        }
+			}
+		}
+  }    
+
+  .s {
+    &-thewords {
+      margin-top: 82px;
+      padding: 90px 0;
+      background-position: center center;
+    }
+
+    &-main {
+      &__security {
+        a {
+          display: block;
+          margin-top: 15px;
+        }
+      }
+    }
+
+    &-work {
+      &__title {
+        margin-bottom: 35px;
+      }
+      .form {
+        margin-top: 60px;
+      }
+    }
+  }
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {  
+
+  .form {
+    &--horizontal {
+      .form {
+        &__content {
+          flex-direction: column;
+          max-width: 500px;
+        } 
+        
+        &__info {
+          max-width: 500px;
+        }
+      }
+
+      .input-div {
+        margin-right: 0;
+      }  
+    }
+
+    .input-div, .button {
+      width: 100%;
+    }
+  }
+
+  .logo {
+    max-width: 200px;
+  }
+
+  .header {
+    
+  }
+
+  .section {
+    &-title {
+      font-size: 24px;
+    }      
+  }
+
+  .s {
+    &-main {
+      .payment {
+        &__title {
+          font-size: 20px;
+        }
+      }
+    } 
+  }
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+  .break {
+    display: inline;
+  }
+
+  .call-me {
+    display: flex;
+  }
+
+  .footer {
+    font-size: 18px;
+    ul {
+      li {
+        font-size: 18px;
+      }
+    }
+    .logo {
+      margin: 0 auto 20px;
+    }
+    &__payment {
+      flex-direction: column;
+    }
+    .phone {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .politika {
+      font-size: 18px;
+    }
+  }
+
+  .s {
+
+    &-work {
+      &__title {
+        font-size: 22px;
+      }
+      .work {
+        max-width: 185px;
+        width: 100%;
+        margin: 0 auto 20px;
+      }
+    }
+
+    &-thanks {
+      padding: 150px 0 50px;
+      
+      &-title {
+        font-size: 30px;
+      }
+
+      &-text {
+        font-size: 16px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+  
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+  .main-menu {
+		.container {
+			width: auto;
+			padding: 0;
+		}
+  }
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+	
+}
